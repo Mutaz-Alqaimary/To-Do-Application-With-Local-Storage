@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  margin: 20px auto;
+}
+
+.form,
+.tasks {
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  gap: 15px;
+}
+
+.tasks {
+  flex-direction: column;
+}
+
+.form input {
+  border-radius: inherit;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.form .input {
+  flex: 1;
+}
+
+.form :is(.add, .delete-all) {
+  background-color: orangered;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px #ccc;
+  cursor: pointer;
+}
+
+.pointer:hover {
+  background-color: rgb(226, 12, 12);
+}
+
+.pointer:active {
+  background-color: rgb(226, 12, 12);
+  box-shadow: 0 3px #999;
+  transform: translateY(4px);
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+}
+
+.tasks .task {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: arial;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tasks .task:hover {
+  background-color: #f7f7f7;
+}
+
+.tasks .task.done {
+  opacity: 0.5;
+}
+
+.tasks .task span {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 2px 6px;
+  border: none;
+}
+
+.tasks .task span:hover {
+  background-color: rgb(226, 12, 12);
+}
